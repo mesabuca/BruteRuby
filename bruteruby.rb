@@ -31,7 +31,7 @@ class Cracker
     (@password_range).each do |password_length|  # loop to gradually increase password length
       num_combinations = @char_array.length ** password_length
       password, perm_number = do_combination(num_combinations, password_length)
-      if password
+      if perm_number
         puts "#{password} | Access Granted | #{perm_number} / #{num_combinations}"
         return password
       end
